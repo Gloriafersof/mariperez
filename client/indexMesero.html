@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./comida.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b159f98088.js" crossorigin="anonymous"></script>
+    <script type="module" src="./products/productFetchAPI.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </head>    
+  <body class="body">
+     
+    <header class="header">
+        <div class="content">
+            <h1>MARIPEREZ</h1>
+            
+    </header>
+    
+        <div class="options">
+            
+            <nav class="menu">
+                <ul>
+                    <li id="mesasboton" >
+                        <a href="#" >Mesas</a>
+                    </li>
+                  
+                    <li  class="productosClick"  id="productBoton"> <a href="#">Productos</a>
+                    </li>
+                     <button class="cerrarSesion" id="cerrarSes">Cerrar sesion</button>
+                </ul>
+            </nav>
+        </div>
+<!--         
+        <div class="icono" id="menu-hambur">
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>        
+            
+        </div>
+        <div    class="productos show" id="productos-abiertos">
+            <nav class="menu-open">
+                <ul>
+                    <li   id="combosboton">
+                        <a href="#">Combos</a> 
+                    </li>
+                 
+                </ul>
+            </nav>
+          </div> -->
+          <select name="boton" id="boton">
+            <option value="" disabled>
+              selecciona una categoria
+            </option>
+            <option value="combos">
+              Combos
+            </option>
+            <option value="bebidas">
+              Bebidas
+            </option>
+            <option value="Comida">
+              Comida
+            </option>
+            <option value="postres">
+              Postres
+            </option>
+          </select>
+    <div class="">
+      <div class=""  id="comida-items">
+          
+          
+          <div class="container-items noVer"  id="productList"></div>
+          
+          <ul id="comandaList"></ul>
+ 
+
+          
+        </div>
+    </div>
+
+
+    <div class=""  id="comida-items">
+          
+          
+      <div class="container-items  ocultar" id="ventasList">
+      </div>
+      
+      <ul id="comandaList"></ul>
+
+
+      
+    </div>
+
+    <div class="content1" >
+      <div    class="mesas cerrada"  id="mesas">
+        <div class="container-items" id="ordenList"></div>
+        <div class="container-items" id="ordenes"></div>
+      </div>
+  </div>
+
+
+
+  <div    class="mesas cerrada"  id="ventas"></div>
+  <div id="productList"></div>
+  <h2>Comanda:</h2>
+  <ul id="comandaList"></ul>
+  <ul id="productsList"></ul>
+
+  <div id="orderDetails"></div>
+    
+
+    <!-- <div class="">
+        <div class="container-items"  id="comida-items">
+            
+            
+            <div class="" id="bebidasList"></div>
+            <ul id="comandaList"></ul>
+            
+            
+          </div>
+ -->
+
+
+
+
+ 
+    <!-- </div> -->
+
+<!-- 
+    <div class="info">
+
+        <style>
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enviar Orden</h1>
+
+  <div id="productList"></div>
+  <div id="bebidasList"></div>
+
+  
+
+  <h2>Comanda</h2>
+  <ul id="comandaList"></ul>
+  <div id="tableButtons">
+    <button class="tableButton" data-table="mesa1">Mesa 1
+      <ul id="orderListMesa1"></ul>
+    </button>
+    <button class="tableButton" data-table="mesa2">Mesa 2
+      <ul id="orderListMesa2"></ul>
+    </button>
+    <button class="tableButton" data-table="mesa3">Mesa 3
+      <ul id="orderListMesa3"></ul>
+    </button>
+  </div>
+
+  <button id="ordenarButton">Enviar Orden</button>
+
+  
+  <p id="errorMensaje"></p>
+  <ul id="orderListMesa1"></ul>
+  <ul id="orderListMesa2"></ul>
+  <ul id="orderListMesa3"></ul>
+
+  
+  <h2>Contenido de la Mesa Seleccionada</h2>
+  <div id="tableContent" class="tableContent"></div> -->
+  <button id="enviarButton">Enviar Orden</button>  
+  <button id="agregarButton">Eliminar mesa</button>
+  <select    id="selectMesas" >
+   
+    <option value="0" >Elige</option>
+    <option value="1" class="table-option" >Mesa 1</option>
+    <option value="2" class="table-option">Mesa 2</option>
+    <option value="3" class="table-option">Mesa 3</option>
+    <option value="4" class="table-option">Mesa 4</option>
+    <option value="5" class="table-option">Mesa 5</option>
+    <option value="6" class="table-option">Mesa 6</option>
+    <option value="7" class="table-option">Mesa 7</option>
+    <option value="8" class="table-option">Mesa 8</option>
+    <option value="9" class="table-option">Mesa 9</option>
+    <!-- Agrega más opciones de mesas si es necesario -->
+  </select>
+  
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+ 
+
+    
+    <script type="module" src="./login.js/mesa"></script>
+    <script type="module" src="./js/meseroMenu.js"></script>
+    <script type="module" src="./js/select.js"></script>
+    <script type="module" src="./products/meseroConfig.js"></script>
+    <script type="module" src="./bebidas/bebidas.js"></script>
+    <script type="module" src="../agregarPro.js"></script>
+    <script type="module" src="./login/cierre.js"></script>
+    <script type="module" src="./orden/orden.js"></script>
+  </body>
+  
+</html>

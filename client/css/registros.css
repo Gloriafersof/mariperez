@@ -1,0 +1,397 @@
+
+*
+{
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing:border-box;
+    
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+
+    background-image:url('/img/fonoooo.jpg') ;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size:cover ;
+
+}
+
+.box{
+position: relative;
+width: 380px;
+height:500px;
+background: #823838c7;
+border-radius: 8px;
+z-index: 10;
+
+}
+
+.registro{
+    display: none;
+    flex-direction: column;
+}
+.caja
+{
+    content: '';
+    position: absolute;
+
+    left: 500px;
+   
+    /* background: linear-gradient(0deg,transparent,
+    transparent, #ffaf03, #ffe345,#e9f325); */
+    z-index: 1;
+  
+    margin-top: 100px;
+    margin-left: 300px;
+
+
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+        
+    }
+    100%
+    {
+        transform: rotate(360deg);
+        
+    }
+}
+
+
+.caja
+{
+    content: '';
+    position: absolute;
+
+    left: 500px;
+   
+    /* background: linear-gradient(0deg,transparent,
+    transparent, #ffaf03, #ffe345,#e9f325); */
+    z-index: 1;
+ 
+    margin-top: 100px;
+    margin-left: 300px;
+
+
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+        
+    }
+    100%
+    {
+        transform: rotate(360deg);
+        
+    }
+}
+
+
+.box form {
+    position: absolute;
+    inset: 4px;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index:2 ;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.box form h2{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+
+.box form .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+
+}
+
+.box form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    color: #000000;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+    
+}
+
+.box form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+}
+
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+
+}
+
+.box form .inputBox i{
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 2px;
+background:#fff;
+border-radius: 4px;
+overflow: hidden;
+transition: 0.5s;
+pointer-events: none;
+
+}
+
+
+.form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i
+{
+    height: 44px;
+
+}
+
+.form .links{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form .links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.form .links a:hover,
+.form .links a:nth-child(2)
+{
+    color: #fff;
+}
+
+.form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px ;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.form input[type="submit"]:active{
+    opacity:0.8 ;
+}
+
+
+.show{
+    display: block;
+}
+
+
+.close{
+    display: none;
+}
+
+
+
+.warnings{
+width: 200px;
+text-align: center;
+margin: auto;
+color: #c5b71b;
+padding-top: 10px;
+}
+
+
+@media screen and (max-width: 778px){
+    
+.box{
+    position: relative;
+ 
+
+    background: #823838c7;
+    border-radius: 8px;
+    z-index: 10;
+    
+    }
+    
+    .registro{
+        display: none;
+    }
+    .caja
+    {
+        content: '';
+        position: absolute;
+    
+        
+       
+        /* background: linear-gradient(0deg,transparent,
+        transparent, #ffaf03, #ffe345,#e9f325); */
+        z-index: 1;
+        animation: animate 6s linear infinite;
+        margin-top: 100px;
+        margin-left: 300px;
+    
+    
+    }
+
+    
+}
+
+.botones{
+    margin-top: 400px;
+    display: none;
+    border: none;
+    outline: none;
+    padding: 9px 25px ;
+   
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+}
+
+.show{
+    display: block;
+}
+
+.btn {
+    margin-top: 200px;
+    background-color: #8f1212;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #896658;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    margin-right: 400px;
+    margin-left: -200px;
+   z-index: 10;
+    position: absolute;
+
+   }
+   
+   .btn span:last-child {
+    display: none;
+   }
+   
+  
+   
+   .btn:active {
+    background-color: #db8787;
+   }
+   
+
+
+   .ver{
+    display: flex;
+   }
+
+   
+.btn2 {
+    margin-top: 150px;
+    background-color: #860e0e;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    display: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #d5b8ad;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    margin-left: -200px;
+
+   }
+   
+   .btn2 span:last-child {
+    display: none;
+   }
+   
+
+   .ver{
+    display: flex;
+   }
+
+   .orden{
+    display: flex;
+   }
+
+.loginBoton{
+    margin-top: 100px;
+    background-color: #860e0e;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #d5b8ad;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+    cursor: pointer;
+    
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    margin-left: -200px;
+
+}
+
+.warnings{
+    margin-top: 230px;
+    margin-left: -350px;
+    position: absolute;
+z-index: 10;
+}

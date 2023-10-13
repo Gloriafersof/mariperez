@@ -1,0 +1,99 @@
+// Obtener los elementos relevantes del DOM
+const mesas = document.getElementsByClassName('mesa');
+const listaProductos = document.getElementById('listaProductos');
+const listaComanda = document.getElementById('listaComanda');
+let productosVisibles = false;
+let comanda = [];
+
+// Función para mostrar la lista de productos en la sección de productos
+const mostrarListaProductos = async () => {
+  try {
+    // Realizar la solicitud GET para obtener los productos desde la API o cualquier otra fuente de datos
+    const respuesta = await fetch('http://localhost:3600/products', {
+      method: 'GET',
+    });
+
+    if (!respuesta.ok) {
+      throw new Error('Error al obtener los productos');
+    }
+
+    const products = await respuesta.json();
+
+    // Construir la lista de productos en base a los datos obtenidos
+    const itemsProductos = products.message.map((products) => {
+      const printProduct = `
+        <div class="card">
+          <div class="card-img">
+            <img src='${products.product.imagen}' referrerpolicy="no-referrer" />
+          </div>
+          <div class="card-title">
+            Nombre: ${products.product.nombre}
+          </div>
+          <div class="card-subtitle">
+            Descripcion: ${products.product.descripcion}
+          </div>
+          <div class='card-footer'>
+            <div class="card-price"><span>$</span> ${products.product.precio}</div>
+          </div>
+          <button class="btnAddProduct" data-nombre="${products.product.nombre}" data-precio="${products.product.precio}">Agregar</button>
+        </div>
+      `;
+      return printProduct;
+    });
+
+    // Actualizar la lista de productos en la sección de productos
+    listaProductos.innerHTML = itemsProductos.join("");
+    productosVisibles = true;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
+// Función para agregar un producto a la comanda
+const agregarProducto = (nombre, precio) => {
+  const product = {
+    nombre: nombre,
+    precio: precio
+  };
+  comanda.push(product);
+  mostrarComanda();
+};
+
+// Función para mostrar la comanda en la sección de comanda
+const mostrarComanda = () => {
+  listaComanda.innerHTML = ""; // Vaciar el contenido de la lista de comanda
+
+  comanda.forEach((product) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${product.nombre} - $${product.precio}`;
+    listaComanda.appendChild(listItem);
+  });
+};
+
+// Agregar el evento de clic a cada mesa para mostrar/ocultar la lista de productos
+Array.from(mesas).forEach((mesa) => {
+  mesa.addEventListener('click', () => {
+    if (productosVisibles) {
+      listaProductos.innerHTML = ""; // Vaciar el contenido de la lista de productos
+      productosVisibles = false;
+    } else {
+      mostrarListaProductos()
+        .catch((error) => console.error(error));
+    }
+  });
+});
+
+// Agregar el evento de clic a los productos para agregarlos a la comanda
+listaProductos.addEventListener('click', (event) => {
+  const target = event.target;
+  const contenido = target.textContent;
+  const elementos = contenido.split(' - ');
+  if (elementos.length !== 2) {
+    // Manejar el escenario inesperado, como imprimir un mensaje de error o retornar.
+    return;
+  }
+  const nombreProducto = elementos[0];
+  const precioProducto = elementos[1].slice(1);
+  agregarProducto(nombreProducto, precioProducto);
+});

@@ -1,0 +1,252 @@
+
+  
+  .mesas{
+  
+      align-content:center;
+      /* margin-left: 140px;
+      margin-right: 140px; */
+     font-family: Arial, Helvetica, sans-serif; 
+     grid-template-columns: repeat(auto-fill, 330px);
+     justify-content: center;
+     gap: 0px;
+     
+     margin-left: 150px;
+     background-color: beige;
+     width: 88.8%;
+  display: none;
+  position: absolute;
+  z-index: 100;
+  left: 32px;
+  top: 170px;
+
+   
+  
+     
+  }
+  
+  .abrir-mesas{
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+  }
+  
+  .abrir-ventas{
+  
+    display: block;
+   
+  }
+  
+  
+  
+    /* [data-content]{
+      display: none;
+    }
+    .active[data-content]{
+      display: grid;
+    } */
+  
+  
+    /* .content1{
+      
+    } */
+  
+  
+  .mesa1 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa2 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;}
+  
+  .mesa3 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa4 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa5 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa6 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa7 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+      
+  }
+  .mesa8 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa9 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa10 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa11 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .mesa12 button{
+    color: black;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    /* margin-left: -160px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .abrir-mesas{
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .cerrarSesion{
+     color: aliceblue;
+      border: none;
+      width: 10em;
+      height: 3em;
+      border-radius: 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      background: #242121;
+      cursor: pointer;
+      transition: all 450ms ease-in-out;
+      font-size: 20px;
+    }
+    
+    .sparkle {
+      fill: #AAAAAA;
+      transition: all 800ms ease;
+    }
+    
+    .text {
+      font-weight: 600;
+      color: #AAAAAA;
+      font-size: medium;
+    }
+    
+    .cerrarSesion:hover {
+      background: linear-gradient(0deg,#d2403d,#eac53f);
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+      inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+      0px 0px 180px 0px #fff200;
+      transform: translateY(-2px);
+    }
+    
+    .cerrarSesion:hover .text {
+      color: white;
+    }
+    
+    .cerrarSesion:hover .sparkle {
+      fill: white;
+      transform: scale(1.2);
+    } 
+  
